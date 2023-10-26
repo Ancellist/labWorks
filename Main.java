@@ -5,7 +5,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);//Создание ввода
         int n = scanner.nextInt();//Ввод переменной
         int m = scanner.nextInt();//Ввод переменной
-        int[][] arr = new int[n][m];//2-х мерный массив
+        int[][] arr = new int[n][m];//Матрица
 
         for (int i = 0 ;i < arr.length;i++ ){
             for (int j = 0;j<arr[i].length; j++){

@@ -7,7 +7,7 @@ public class Matrix {
         Scanner scanner = new Scanner(System.in);//Создание ввода
         int n = scanner.nextInt();//Ввод переменной
         int m = scanner.nextInt();//Ввод переменной
-        int[][] arr = new int[n][m];//2-х мерный массив
+        int[][] arr = new int[n][m];//Матрица
         int buff = 0;//Главная диагональ сумма элементов
         int buff1 = 0;//Побочная диагональ сумма элементов
 
