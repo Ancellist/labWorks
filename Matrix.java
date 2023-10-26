@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class Matrix {
     public static void main(String[] args) {
@@ -12,22 +13,29 @@ public class Matrix {
 
         for (int i = 0 ;i < arr.length;i++ ){
             for (int j = 0;j<arr[i].length; j++){
-                arr[i][j]=scanner.nextInt();
+                arr[i][j]= new Random().nextInt(15);//ввод
             }
-        }//Цикл ввода матрицы построчено
+        }//Цикл ввода матрицы построчно
 
         for (int i =0;i < arr.length;i++){
             System.out.println(arr[i][i]);
-            buff += arr[i][i];
+            buff += arr[i][i];//Сложение всех элементов массива
         }//Цикл вывода диагонали
 
         for (int i =0;i < arr.length;i++){
             int j = arr.length-i-1;
             System.out.println(arr[i][j]);
-            buff1 += arr[i][j];
+            buff1 += arr[i][j];//Сложение всех элементов массива
         }//Цикл вывода побочной диагонали
 
-        System.out.println(buff);
-        System.out.println(buff1);
+        if (buff > buff1){
+            System.out.println("Сумма главной диагонали больше");
+        }
+        if (buff < buff1){
+            System.out.println("Сумма побочной диагонали больше");
+        }
+        if (buff == buff1){
+            System.out.println("Сумма диагогалей одинакова");
+        }
     }
 }
